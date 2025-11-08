@@ -1,0 +1,294 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0e27;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(10, 14, 39, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #00d9ff;
+}
+
+.signin-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    z-index: 999;
+}
+
+.sidebar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+.sidebar a img {
+    width: 30px;
+    margin-bottom: 5px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    color: #00d9ff;
+}
+
+/* Social Sidebar */
+.social-sidebar {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 999;
+}
+
+.social-sidebar a img {
+    width: 35px;
+    transition: transform 0.3s;
+}
+
+.social-sidebar a:hover img {
+    transform: scale(1.2);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+}
+
+.countdown-timer {
+    margin-bottom: 30px;
+}
+
+.timer {
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-logo {
+    max-width: 400px;
+    margin: 30px 0;
+}
+
+.hero h1 {
+    font-size: 72px;
+    margin: 20px 0;
+    background: linear-gradient(45deg, #00d9ff, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.scroll-indicator {
+    margin-top: 50px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.cta-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #00d9ff;
+}
+
+/* Grid Layouts */
+.workshop-grid,
+.competition-list,
+.contacts-grid,
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Cards */
+.workshop-card,
+.competition-card,
+.contact-card,
+.info-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s;
+}
+
+.workshop-card:hover,
+.competition-card:hover,
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.workshop-card img,
+.competition-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.workshop-card button,
+.competition-card button {
+    background: #00d9ff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #0a0e27;
+    margin-top: 15px;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+Add styles.css - Main stylesheet/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(10, 14, 39, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+    }
+    
+    .hero h1 {
+        font-size: 42px;
+    }
+    
+    .cta-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
